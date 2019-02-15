@@ -1,25 +1,14 @@
-let express = require('express');
+/* index.js
+Rajandeep Kaur Dhaliwal
+300926123
+Feb 15 2019*/
+
+let express = require("express");
 let router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
-
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About Me' });
-});
-
-router.get('/products', function(req, res, next) {
-  res.render('project', { title: 'Projects' });
-});
-
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services Page' });
-});
-
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Me' });
+router.get("/", function(req, res, next) {
+  res.render("index", { title: "Home" });
 });
 
 module.exports = router;

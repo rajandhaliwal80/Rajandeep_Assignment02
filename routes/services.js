@@ -1,8 +1,14 @@
-let express = require('express');
+/* services.js
+Rajandeep Kaur Dhaliwal
+300926123
+Feb 15 2019*/
+
+let express = require("express");
 let router = express.Router();
 
-router.get('/services', function(req, res, next) {
-    res.render('services', { title: 'Services' });
-  });
+/* GET services page. */
+router.get("/services", function(req, res, next) {
+  res.render("services", { title: "Services" });
+});
 
-  module.exports = router;
+module.exports = router;
