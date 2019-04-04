@@ -22,7 +22,7 @@ let aboutRouter=require('./routes/about');
 let contactRouter=require('./routes/contact');
 let projectRouter=require('./routes/projet');
 let servicesRouter=require('./routes/services');
-
+let contactsRouter=require('./routes/contacts');
 
 let app = express();
 
@@ -39,7 +39,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', indexRouter);
 app.use('/',aboutRouter);
-app.use('/contact-list',contactRouter);
+app.use('/',contactRouter);
+app.use('/contact-list',contactsRouter);
 app.use('/',projectRouter);
 app.use('/',servicesRouter);
 
