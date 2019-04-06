@@ -10,7 +10,13 @@
     "npm": "^6.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "@auth0/angular-jwt": "^2.1.0",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "@ng-bootstrap/ng-bootstrap": "^4.1.1",
+    "@types/bootstrap": "^4.3.0",
+    "@types/jquery": "^3.3.29",
+    "angular2-flash-messages": "^3.0.1",
+    "bootstrap": "^4.3.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -25,7 +31,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.15.0"
   },
   "description": "Assignment 02",
   "main": "server.js",
