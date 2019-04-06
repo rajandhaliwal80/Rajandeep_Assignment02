@@ -52,6 +52,26 @@ saveUninitialized: false,
 resave: false
 }));
 
+//initialize flash
+app.use(flash());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport user configuration
+
+// create a User model
+let userModel = require('../models/user');
+let User = userModel.User;
+
+// implement a User authetication strategy
+passport.use(User.createStrategy());
+
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use('/', indexRouter);
 app.use('/',aboutRouter);
 app.use('/',contactRouter);
