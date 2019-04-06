@@ -17,7 +17,7 @@ Feb 15 2019*/
         event.preventDefault();
         window.location.assign("/contact-list");
       }
-    })
+    });
   }
 
   window.addEventListener("load", Start);

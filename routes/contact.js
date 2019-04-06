@@ -6,9 +6,9 @@ Feb 15 2019*/
 let express = require("express");
 let router = express.Router();
 
-/* GET contact page. */
-router.get("/contact", function(req, res, next) {
-  res.render("contact", { title: "Contact" });
-});
+
+let contactController = require('../controller/contact');
+
+router.get('/contact', contactController.displayContactPage);
 
 module.exports = router;

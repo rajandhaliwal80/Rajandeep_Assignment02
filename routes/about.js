@@ -6,9 +6,14 @@ Feb 15 2019*/
 let express = require("express");
 let router = express.Router();
 
-/* GET about page. */
-router.get("/about", function(req, res, next) {
-  res.render("about", { title: "About Me" });
-});
+
+let aboutController = require('../controller/about');
+
+router.get('/about', aboutController.displayAboutPage);
 
 module.exports = router;
+
+
+
+
+

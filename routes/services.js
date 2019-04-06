@@ -6,9 +6,9 @@ Feb 15 2019*/
 let express = require("express");
 let router = express.Router();
 
-/* GET services page. */
-router.get("/services", function(req, res, next) {
-  res.render("services", { title: "Services" });
-});
+let servicesController = require('../controller/services');
+
+router.get('/services', servicesController.displayServicesPage);
+
 
 module.exports = router;
